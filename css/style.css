@@ -15,6 +15,10 @@ body {
   font-size: 16px;
 }
 
+.wrap {
+  overflow: hidden;
+}
+
 ul {
   list-style: none;
 }
@@ -63,6 +67,7 @@ a {
 =====================================================*/
 header {
   background: url(../img/header-cafe-black.png) center center/cover;
+  opacity: 0.8;
   background-size: cover;
 }
 
@@ -200,6 +205,7 @@ header {
 
 .media__img img {
   vertical-align: bottom;
+  height: 300px;
 }
 
 .media__body {
@@ -309,6 +315,10 @@ header {
   margin: 15px;
 }
 
+.google-map {
+  text-align: center;
+}
+
 /*=====================================================
 #フッター
 =====================================================*/
@@ -316,12 +326,12 @@ footer {
   background-color: #333;
 }
 
-.footer-logo {
+.footer-title {
   text-align: center;
   padding-top: 20px;
 }
 
-.footer-logo img {
+.footer-title img {
   width: 15%;
 }
 
@@ -572,6 +582,9 @@ li {
 }
 
 @media screen and (max-width: 767px) {
+  .access {
+    max-width: 400px;
+  }
   .container {
     display: block;
     margin: 50px;

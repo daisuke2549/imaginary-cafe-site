@@ -17,7 +17,7 @@ body{
     font-family:"Noto Sans CJK Jp";
     line-height: 1.6875;
     font-size: $font-size;
-    @import url(http://fonts.googleapis.com/earlyaccess/notosansjapanese.css);
+    @import url(http:fonts.googleapis.com/earlyaccess/notosansjapanese.css);
 }
 .wrap{
     overflow: hidden;
@@ -237,161 +237,173 @@ header{
 
 
 
-//   #モーダル
-
-//   .contact__modal {
-//     position: fixed;
-//     left: 50%;
-//     top: 50%;
-//     -webkit-transform: translate(-50%, -50%);
-//             transform: translate(-50%, -50%);
-//     width: 70%;
-//     max-width: 100%;
-//     padding: 60px;
-//     height: 80%;
-//     z-index: 100;
-//     background: #fff;
-//     display: none;
-//   }
-
-//   @media (max-width: 1247px) {
-//     .contact__modal {
-//       width: 90%;
-//       height: 80%;
-//       padding: 38px 36px 20px;
-//     }
-//   }
-
-//   @media (max-width: 1247px) {
-//     .contact__modal {
-//       height: 90%;
-//       padding: 38px 24px 20px;
-//     }
-//   }
-
-//   .contact__modal.is-show {
-//     display: block;
-//   }
-
-//   .contact__modal-close-icon {
-//     text-align: center;
-//     position: absolute;
-//     right: -21px;
-//     top: -21px;
-//     cursor: pointer;
-//   }
-
-//   .contact__modal-close-icon img {
-//     width: 43px;
-//   }
-
-//   .contact__modal-title {
-//     font-size: 24px;
-//     font-weight: 700;
-//     text-align: center;
-//     padding-bottom: 24px;
-//     position: relative;
-//     color: #707070;
-//     line-height: 1;
-//   }
-
-//   .contact__modal-title::after {
-//     content: "";
-//     width: 100px;
-//     height: 2px;
-//     background: #3f51b5;
-//     position: absolute;
-//     bottom: 0;
-//     left: 50%;
-//     -webkit-transform: translateX(-50%);
-//             transform: translateX(-50%);
-//   }
-
-//   .contact__modal-content {
-//     overflow: auto;
-//     margin-top: 36px;
-//     height: calc(100% - 124px - 52px);
-//   }
-
-//   .contact__modal-content > :first-child {
-//     margin-top: 0;
-//   }
-
-//   @media (max-width: 1247px) {
-//     .contact__modal-content {
-//       margin-top: 60px;
-//       height: calc(100% - 148px - 52px);
-//     }
-//   }
-
-//   .contact__modal-head {
-//     font-size: 20px;
-//     padding: 0 0 0 20px;
-//     color: #707070;
-//     position: relative;
-//     font-weight: 700;
-//     margin-top: 40px;
-//   }
-//   .contact__modal-head::before {
-//     content: "";
-//     position: absolute;
-//     height: 18px;
-//     width: 3px;
-//     background: #3f51b5;
-//     top: 50%;
-//     -webkit-transform: translateY(-50%);
-//             transform: translateY(-50%);
-//     left: 0;
-//   }
-
-//   .contact__modal-text {
-//     padding: 0 0 0 20px;
-//     margin-top: 6px;
-//     color: #707070;
-//     line-height: 1.625;
-//   }
-
-//   .contact__modal-close-button {
-//     text-align: center;
-//     margin-top: 50px;
-//   }
-
-//   .contact__modal-background {
-//     width: 100%;
-//     height: 100%;
-//     position: fixed;
-//     background: #000;
-//     opacity: 0.3;
-//     top: 0;
-//     left: 0;
-//     z-index: 99;
-//     display: none;
-//   }
-
-//   .contact__modal-background.is-show {
-//     display: block;
-//   }
-
-//   .button-modal {
-//     display: inline-block;
-//     background: #3f51b5;
-//     color: #fff;
-//     text-align: center;
-//     font-size: 16px;
-//     font-weight: 700;
-//     text-decoration: none;
-//     -webkit-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
-//             box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
-//     cursor: pointer;
-//     -webkit-transition: all 0.3s ease 0s;
-//     transition: all 0.3s ease 0s;
-//     border-radius: 8px;
-//     width: 176px;
-//     padding: 14px;
-//     border: none;
-//   }
-
-
+       #モーダル
+       .contact__modal {
+        position: fixed;
+        left: 50%;
+        top: 50%;
+        -webkit-transform: translate(-50%, -50%);
+                transform: translate(-50%, -50%);
+        width: 70%;
+        max-width: 100%;
+        padding: 60px;
+        height: 80%;
+        z-index: 100;
+        background: #fff;
+        display: none;
+      }
+      
+      @media (max-width: 1247px) {
+        .contact__modal {
+          width: 90%;
+          height: 80%;
+          padding: 38px 36px 20px;
+        }
+      }
+      
+      @media (max-width: 1247px) {
+        .contact__modal {
+          height: 90%;
+          padding: 38px 24px 20px;
+        }
+      }
+      
+      .contact__modal.is-show {
+        display: block;
+      }
+      
+      .contact__modal-close-icon {
+        text-align: center;
+        position: absolute;
+        right: -21px;
+        top: -21px;
+        cursor: pointer;
+      }
+      
+      .contact__modal-close-icon img {
+        width: 43px;
+      }
+      
+      .contact__modal-title {
+        font-size: 24px;
+        font-weight: 700;
+        text-align: center;
+        padding-bottom: 24px;
+        position: relative;
+        color: #707070;
+        line-height: 1;
+      }
+      
+      .contact__modal-title::after {
+        content: "";
+        width: 100px;
+        height: 2px;
+        background: #3f51b5;
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        -webkit-transform: translateX(-50%);
+                transform: translateX(-50%);
+      }
+      
+      .contact__modal-content {
+        overflow: auto;
+        margin-top: 36px;
+        height: calc(100% - 124px - 52px);
+      }
+      
+      .contact__modal-content > :first-child {
+        margin-top: 0;
+      }
+      
+      @media (max-width: 1247px) {
+        .contact__modal-content {
+          margin-top: 60px;
+          height: calc(100% - 148px - 52px);
+        }
+      }
+      
+      @media (max-width: 767px) {
+        .contact__modal-content {
+          margin-top: 38px;
+          height: calc(100% - 128px - 52px);
+        }
+      }
+      
+      .contact__modal-head {
+        font-size: 20px;
+        padding: 0 0 0 20px;
+        color: #707070;
+        position: relative;
+        font-weight: 700;
+        margin-top: 40px;
+      }
+      
+      @media (max-width: 767px) {
+        .contact__modal-head {
+          margin-top: 32px;
+        }
+      }
+      
+      .contact__modal-head::before {
+        content: "";
+        position: absolute;
+        height: 18px;
+        width: 3px;
+        background: #3f51b5;
+        top: 50%;
+        -webkit-transform: translateY(-50%);
+                transform: translateY(-50%);
+        left: 0;
+      }
+      
+      .contact__modal-text {
+        padding: 0 0 0 20px;
+        margin-top: 6px;
+        color: #707070;
+        line-height: 1.625;
+      }
+      
+      .contact__modal-close-button {
+        text-align: center;
+        margin-top: 50px;
+      }
+      
+      .contact__modal-background {
+        width: 100%;
+        height: 100%;
+        position: fixed;
+        background: #000;
+        opacity: 0.3;
+        top: 0;
+        left: 0;
+        z-index: 99;
+        display: none;
+      }
+      
+      .contact__modal-background.is-show {
+        display: block;
+      }
+      
+      .button-modal {
+        display: inline-block;
+        background: #3f51b5;
+        color: #fff;
+        text-align: center;
+        font-size: 16px;
+        font-weight: 700;
+        text-decoration: none;
+        -webkit-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+                box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+        cursor: pointer;
+        -webkit-transition: all 0.3s ease 0s;
+        transition: all 0.3s ease 0s;
+        border-radius: 8px;
+        width: 176px;
+        padding: 14px;
+        border: none;
+      }
+      
 
 /*=====================================================
 #ニュース
@@ -568,7 +580,7 @@ footer{
 body{
     font-size: 14px;
 
-    @import url(http://fonts.googleapis.com/earlyaccess/notosansjapanese.css);
+    @import url(http:fonts.googleapis.com/earlyaccess/notosansjapanese.css);
 }
 
 

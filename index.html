@@ -5,15 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name = "description" content = "架空カフェサイト">
     <title>imaginary-cafe</title>
-    <!-- reset css-->
     <link rel = "stylesheet" href = "./css/reset.css">
-    <!-- jquery & iScroll -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/iScroll/5.2.0/iscroll.min.js"></script>
-    <!-- drawer.js -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/drawer/3.2.2/js/drawer.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
-    <!-- original -->
     <link rel = "stylesheet" href = "./css/style.css">
     <link rel="stylesheet" href="./css/animate.css">
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css" />
@@ -21,6 +17,8 @@
     <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script src="./js/wow.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="js/jquery.bgswitcher.js"></script>
 </head>
 <body>
 <header>
@@ -120,11 +118,25 @@
 
     </div>
    <div class="detailed-button  wow fadeInUp">
-       <button>詳しくはこちら</button>
+      <button id ="openmodal" >詳しくはこちら</button>
    </div>
 
-
+   <div class="modal-menu">
+     <div class="modal-wrapper">
+      <div class="modal-wrapper-area">
+        <div class="modal-content">
+                <h2>カフェメニューについて</h2>
+                <p>飲み物、食べ物合わせて、30種類以上用意しています。<br>詳しくは店内メニューをご覧ください。</p>
+        </div>
+        <div class="close-modal">
+            <button id ="close-modal" >メニューを閉じる</button>
+        </div>
+      </div>
+     </div>
+   </ぢ>
 </section>
+
+
 <section  id = "news" class="news inner section">
     <div class="util-title wow fadeInRight"><h2 >NEWS</h2></div>
     <div class="news__items wow fadeInRight">
@@ -166,9 +178,23 @@
         </div>
     </div>
     <div class="detailed-button">
-        <button>詳しくはこちら</button>
+        <button id="openModal2">詳しくはこちら</button>
     </div>
 </section>
+<!-- <section class="service" id="service">
+<div class="util-title wow fadeInUp"><h2 >SERVICE</h2>
+    <p>カフェ内でのサービスは以下の通りです</p>
+<div class="service-list">
+    <!-- <li><img src="./img/PC.png" alt="PC"></li>
+    <li><img src="./img/study.png" alt="勉強"></li>
+    <li><img src="./img/charger.png" alt="充電器"></li>
+    <li><img src="./img/parking.png" alt="駐車場"></li> -->
+    <li>PC</li>
+    <li>勉強</li>
+    <li>充電器</li>
+    <li>駐車場</li>
+</div>
+</section> -->
 <section  id = "access" class="access inner section">
  <div class="util-title wow fadeInUp"><h2 >ACCESS</h2>
   <p>神奈川県横浜市泉区</p>
@@ -176,34 +202,65 @@
     <div class="google-map wow fadeIn">
         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d52023.327140536574!2d139.46678058080934!3d35.418684218647186!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x601850c3fa69f1af%3A0xcdf6519b3f90d883!2z56We5aWI5bed55yM5qiq5rWc5biC5rOJ5Yy6!5e0!3m2!1sja!2sjp!4v1612683080022!5m2!1sja!2sjp" width="300" height="350" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
     </div>
-    <div class="container wow fadeIn">
-        <div class="item"><img src="./img/バナー2.png" alt="バナー１"></div>
-        <div class="item"><img src="./img/バナー2.png" alt="バナー２"></div>
-        <div class="item"><img src="./img/バナー2.png" alt="バナー３"></div>
-        <div class="item"><img src="./img/バナー2.png" alt="バナー４"></div>
-      </div>
 </section>
+
+
+<section  id = "contact" class="contact inner section">
+    <div class="util-title wow fadeInUp"><h2 >Contact</h2>
+    <p>お問い合わせはこちらから</p>
+    </div>
+    <div class="Form">
+      <div class="Form-Item wow fadeInLeft">
+        <p class="Form-Item-Label">
+          <span class="Form-Item-Label-Required">必須</span>会社名
+        </p>
+        <input type="text" class="Form-Item-Input" placeholder="例）株式会社令和">
+      </div>
+      <div class="Form-Item wow fadeInLeft">
+        <p class="Form-Item-Label"><span class="Form-Item-Label-Required">必須</span>氏名</p>
+        <input type="text" class="Form-Item-Input" placeholder="例）山田太郎">
+      </div>
+      <div class="Form-Item wow fadeInLeft">
+        <p class="Form-Item-Label"><span class="Form-Item-Label-Required">必須</span>電話番号</p>
+        <input type="text" class="Form-Item-Input" placeholder="例）000-0000-0000">
+      </div>
+      <div class="Form-Item wow fadeInLeft">
+        <p class="Form-Item-Label"><span class="Form-Item-Label-Required">必須</span>メールアドレス</p>
+        <input type="email" class="Form-Item-Input" placeholder="例）example@gmail.com">
+      </div>
+      <div class="Form-Item wow fadeInLeft">
+        <p class="Form-Item-Label isMsg"><span class="Form-Item-Label-Required">必須</span>お問い合わせ内容</p>
+        <textarea class="Form-Item-Textarea"></textarea>
+      </div>
+      <input type="submit" class="Form-Btn fadeInDown" value="送信する">
+    </div>
+
+ </div>
+</section>
+
+
+
 <footer class="footer wow " id="contact">
     <div class="footer-title wos fadeIn">泉区カフェ</div>
     <div class="footer-navigation">
         <ul>
-            <li class="footer-nav-item">
-                <a class="footer-nav-item-link wow fadeIn" href="#">HOME</a>
+            <li class="footer-nav-item　fadeInLeft">
+                <a class="footer-nav-item-link wow fadeInLeft" href="#">HOME</a>
              </li>
              <li class="footer-nav-item">
-                 <a class="footer-nav-item-link wow fadeIn" href="#">CONCEPT</a>
+                 <a class="footer-nav-item-link wow fadeInLeft" href="#">CONCEPT</a>
              </li>
              <li class="footer-nav-item">
-                 <a class="footer-nav-item-link wow fadeIn" href="#">DRINK</a>
+                 <a class="footer-nav-item-link wow fadeInLeft" href="#">DRINK</a>
              </li>
              <li class="footer-nav-item">
-                 <a class="footer-nav-item-link wow fadeIn" href="#">CAKE</a>
+                 <a class="footer-nav-item-link wow fadeInLeft" href="#">CAKE</a>
              </li>
              <li class="footer-nav-item">
-                 <a class="footer-nav-item-link wow fadeIn" href="#">FOOD</a>
+                 <a class="footer-nav-item-link wow fadeInLeft" href="#">FOOD</a>
              </li>
              <li class="footer-nav-item">
-                <a class="footer-nav-item-link wow fadeIn" href="#">TAKEOUT</a>
+                <a class="footer-nav-item-link wow fadeInLeft" href="#">TAKEOUT</a>
             </li>
         </ul>
     </div>
@@ -270,31 +327,39 @@
       });
     });
 
-// // モダール（開く）
-// jQuery('.detailed-button').click(function(e) {
-// 				e.preventDefault();
-// 				let target = jQuery(this).data("target");
-// 				jQuery('.' + target).addClass('is-show');
-
-// 				return false;
-// 			});
-
-// 			// モダール（閉じる）
-// 			jQuery('.detailed-button').click(function(e) {
-// 				e.preventDefault();
-// 				let target = jQuery(this).data("target");
-// 				jQuery('.' + target).removeClass('is-show');
-
-// 				return false;
-// 			});
-
-
 
 
 </script>
 <script>
     new WOW().init();
 </script>
+<script>
+    jQuery(function($) {
+        $('header').bgSwitcher({
+        images: ['./img/bgi1.png','./img/bgi2.png','./img/bgi3.png','./img/bgi4.png'],
+        interval: 2000,
+        loop: true,
+        shuffle: true,
+        effect: "fade",
+        duration: 500,
+        easing: "swing"
+        });
+    });
 
+    $('.menu').on('click',function(){
+        $('.menu__line').toggleClass('active');
+        $('.gnav').fadeToggle();
+    });
+
+    $(function () {
+    $('#openmodal').click(function(){
+        $('.modal-menu').fadeIn();
+    });
+    $('#close-modal').click(function(){
+        $('.modal-menu').fadeOut();
+    });
+    });
+
+    </script>
 </body>
 </html>
